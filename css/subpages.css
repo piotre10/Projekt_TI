@@ -1,0 +1,70 @@
+
+:root{
+    --navbar-text-color: #f5b507;
+    --navbar-height: 50px;
+    --navbar-bg-image: url(../images/navbarbg.png);
+    --body-bg-image: url(../images/subpagebg2.jpg);
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-image: var(--body-bg-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav {
+    padding: 0px;
+    margin-top: 10px;
+    width: 100%;
+    height: var(--navbar-height);
+    background-image: var(--navbar-bg-image);
+}
+nav div{
+    line-height: var(--navbar-height);
+    height: 100%;
+    width: 150px;
+    background: wheat;
+    display: inline-block;
+}
+nav > label{
+    position: absolute;
+    line-height: var(--navbar-height);
+    height: 100%;
+    width: 100px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: var(--navbar-text-color);
+    text-shadow: 2px 2px 4px #000;
+    display: inline-block;
+    text-align: center;
+    vertical-align: center;
+}
+nav a{
+    line-height: var(--navbar-height);
+	height: 100%;
+    width: 160px;
+	font-size: 18px;
+	display: inline;
+	text-decoration: none;
+    color: var(--navbar-text-color);
+    float: right;
+}
+nav a i{
+    float: right;
+    margin: 15px 10px;
+    vertical-align: center;
+}
+#content{
+    position: absolute;
+    padding: 20px;
+    box-shadow: 0px 0px 20px 5px black;
+    height: 1600px;
+    width: 80%;
+    margin: 50px 10%;
+    background: white;
+}
