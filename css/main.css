@@ -1,0 +1,190 @@
+* 
+{
+    margin: 0;
+}
+
+/* BACKGROUND */
+/* Żeby nie zaburzać proporcji zdjęcia nie możemy idealnie dopasować szerokości lub wysokości (jedno z nich).
+Padło na szerokość. Wystające fragmenty uzupełniam gradientowym tłem.  */
+body 
+{
+    background-image: linear-gradient(CornflowerBlue, rgb(146, 193, 212), rgb(131, 214, 97));
+    background-attachment: fixed;
+}
+#bg
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* NAMEPLATES */
+h1, h2
+{
+    color:rgb(82, 42, 9);
+    position: relative;
+    top: 25px;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+}
+h1
+{
+    font-size: 48px;
+}
+p
+{
+    color:rgb(82, 42, 9);
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+}
+#header
+{
+    background-image: url(../images/main_nameplates.jpg);
+    width: 420px;
+    height: 150px;
+    border: 2px solid rgb(105, 53, 11);
+    border-radius: 20px;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+/* MENU */
+#stick
+{
+    position: absolute;
+    bottom: 0;
+    left: 300px;
+    height: 500px;
+    width: 30px;
+    z-index: 2;
+}
+ul 
+{ 
+    position: absolute;
+    bottom: 90px;
+    left: 160px;
+    z-index: 2;
+    list-style-type: none; 
+} 
+ul li 
+{ 
+    margin: 1em; 
+} 
+ul li a 
+{ 
+    text-decoration: none; 
+    background-image: url(../images/main_nameplates.jpg);
+    display: block; 
+    height: 1.2em; 
+    width: 10em; 
+    padding: 1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    transition: transform .15s linear; 
+    top: 5px;
+} 
+ul li:nth-child(even)
+{ 
+    perspective: 100px;
+} 
+ul li:nth-child(odd) 
+{   
+    perspective: 100px;
+}
+ul li:nth-child(even) a 
+{ 
+    transform-style: preserve-3d;
+    transform: rotateY(-10deg);
+} 
+ul li:nth-child(odd) a 
+{ 
+    transform-style: preserve-3d;
+    transform: rotateY(10deg);
+} 
+ul li a:hover 
+{ 
+    transform: rotateY(0deg);
+}
+
+/* RESPONSIVITY (IMITACJA) */
+@media only screen and (max-height: 600px) 
+{ 
+	h1, h2 { top: 20px; }
+    h2 { font-size: 20px; }
+    h1 { font-size: 36px; }
+    p  { font-size: 14px; }
+    #header
+    {
+        width: 315px;
+        height: 112px;
+        border-radius: 15px;
+        box-shadow: 4px 4px 6px rgba(33,33,33,.7);
+    }  
+    #stick
+    {
+        height: 375px;
+        width: 20px;
+        left: 270px;
+    }
+    ul 
+    { 
+        bottom: 65px;
+        left: 150px;
+    } 
+    ul li a 
+    { 
+        height: 0.72em; 
+        width: 7.5em; 
+        padding: 0.8em;
+        box-shadow: 4px 4px 6px rgba(33,33,33,.7);
+        top: 3px;
+    } 
+    ul li 
+    { 
+        margin: 0.75em; 
+    }  
+}
+@media only screen and (max-height: 400px) 
+{ 
+	h1, h2 { top: 14px; }
+    h2 { font-size: 14px; }
+    h1 { font-size: 24px; }
+    p  { font-size: 10px; }
+    #header
+    {
+        width: 200px;
+        height: 80px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 5px rgba(33,33,33,.7);
+    }  
+    #stick
+    {
+        height: 250px;
+        width: 14px;
+        left: 190px;
+    }
+    ul 
+    { 
+        bottom: 36px;
+        left: 100px;
+    } 
+    ul li a 
+    { 
+        height: 0.48em; 
+        width: 5em; 
+        padding: 0.6em;
+        box-shadow: 3px 3px 5px rgba(33,33,33,.7);
+        top: 3px;
+    } 
+    ul li 
+    { 
+        margin: 0.5em; 
+    }  
+}
