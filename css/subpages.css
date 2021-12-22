@@ -27,9 +27,13 @@ nav {
 nav div{
     line-height: var(--navbar-height);
     height: 100%;
-    width: 150px;
-    background: wheat;
+    width: 170px;
+    background-image: url(../images/nameplate4.png);
+    background-size: auto 100%;
     display: inline-block;
+    font-family: sans-serif;
+    font-size: 18px;
+    padding-left: 20px;
 }
 nav > label{
     position: absolute;
