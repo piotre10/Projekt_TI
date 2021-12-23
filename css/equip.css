@@ -2,7 +2,7 @@
 - na pasku
 - pod obrazkiem
 - nagłówki w tabeli */
-body, nav div p
+body, nav div p, .icon_plecak
 {
     font-family: 'Kaushan Script', cursive;
     color:rgb(82, 42, 9);
@@ -11,15 +11,25 @@ body, nav div p
 {
     
 }*/
-#content
-{
+/* zmiany w stosunku do subpages */ 
+#content{
     background: hsla(0, 0%, 100%, 80%);
+}
+nav div{
+    background-image: url(../images/nameplate_R_yellow.png);
 }
 
 /* KARTKI ZE SPRZĘTEM */
+#cards_layout
+{
+    width: 60%;
+    height: 100%;
+    /*border: 1px solid rgb(82, 42, 9);*/
+    float:left;
+}
 div.card 
 {
-    width: 250px;
+    width: 200px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     margin: 20px;
@@ -27,7 +37,7 @@ div.card
 }
 div.pic_container
 {
-    height: 250px;
+    height: 200px;
     border: 1px solid rgb(82, 42, 9);
     background-color: #e9d6c6;
 }
@@ -40,14 +50,26 @@ div img
     height: 80%;
     margin: 10%;
 }
-div.label_container 
+.label_container, .quantity_container 
 {
     padding: 10px;
     font-size: 20px;
     color:rgb(82, 42, 9);
     border: 1px solid rgb(82, 42, 9);
-    border-top: none;
     background-image: url(../images/main_nameplates.jpg);
+    
+}
+.label_container
+{
+    text-transform: uppercase;
+    border-bottom: none;
+}
+.quantity_container 
+{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    border-top: none;  
+    font-weight: bold;
 }
 
 /* WYBRANE ARTYKUŁY */
@@ -92,6 +114,8 @@ div.label_container
 {
     vertical-align: top;
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 #table_summary
 {
@@ -107,3 +131,16 @@ div.label_container
 {
     text-align: left;
 }
+
+@media only screen and (max-width: 1200px) 
+{
+    #cards_layout
+    {
+        width: 42%;
+    }
+}
+
+/*@media only screen and (max-width: 650px) 
+{
+    hmmm
+}*/

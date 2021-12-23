@@ -3,35 +3,43 @@ var plecak = false;
 var termos = false;
 var śpiwór = false;
 var namiot = false;
+var raki = false;
+var czekan = false;
 
 $(document).ready(function() {
     function updateSum(number) {
         suma += number;
-        if (suma >= 40) {
+        if (suma > 250) {
             $('#discount').text(suma + " zł");
-            $('#normal').text(suma - 20 + " zł");
+            $('#normal').text(suma*0.9 + " zł");
         } else {
             $('#discount').text("");
             $('#normal').text(suma + " zł");
         }
     }
     function insertItem(item_name, item_price) {
-        $('#pic_' + item_name).css({ 'background-color': 'forestgreen' });
+        var item_quantity = prompt("Podaj ilość:");
+        if(item_quantity < 1) return 0;
+        
+        $('#icon_' + item_name).attr('class', 'fas fa-times');
+        $('#txt_' + item_name).text('Usuń z koszyka ');
 
         var newItem = $('<li></li>');
-        $(newItem).text(item_name);
+        $(newItem).text(item_quantity + ' x ' + item_name);
         $(newItem).attr('id', 'list_'+ item_name);
         newItem.insertAfter('#items ul li:last');
 
         var newPrice = $('<li></li>');
-        $(newPrice).text(item_price + ' zł');
+        $(newPrice).text(item_price*item_quantity + ' zł');
         $(newPrice).attr('id', 'list_' + item_name + '_price');
         newPrice.insertAfter('#prices ul li:last');
 
-        updateSum(item_price);
+        updateSum(item_price*item_quantity);
+        return 1;
     }
     function deleteItem(item_name) {
-        $('#pic_' + item_name).css({ 'background-color': '#e9d6c6' });
+        $('#icon_' + item_name).attr('class', 'fas fa-shopping-cart');
+        $('#txt_' + item_name).text('Dodaj do koszyka ');
 
         var price = $('#list_' + item_name + '_price').text().split(" ");
         updateSum(-parseInt(price[0]));
@@ -41,23 +49,58 @@ $(document).ready(function() {
     }
 
     updateSum(0);
-    $('#pic_plecak').click(function() {
+    $('#cart_plecak').click(function() {
         if(!plecak) {
-            insertItem("plecak", 25);
-            plecak = true;
+            if( insertItem("plecak", 30) ) plecak = true;
         } else {
             deleteItem("plecak");
             plecak = false;
         }     
     }); //koniec plecak.click()
-    $('#pic_termos').click(function() {
+
+    $('#cart_termos').click(function() {
         if(!termos) {
-            insertItem("termos", 15);
-            termos = true;
+            if( insertItem("termos", 10) ) termos = true;
         } else {
             deleteItem("termos");
             termos = false;
         }    
     }); //koniec termos.click()
+    
+    $('#cart_śpiwór').click(function() {
+        if(!śpiwór) {
+            if( insertItem("śpiwór", 35) ) śpiwór = true;
+        } else {
+            deleteItem("śpiwór");
+            śpiwór = false;
+        }    
+    }); //koniec śpiwór.click()
+
+    $('#cart_namiot').click(function() {
+        if(!namiot) {
+            if( insertItem("namiot", 80) ) namiot = true;
+        } else {
+            deleteItem("namiot");
+            namiot = false;
+        }    
+    }); //koniec namiot.click()
+
+    $('#cart_raki').click(function() {
+        if(!raki) {
+            if( insertItem("raki", 40) ) raki = true;
+        } else {
+            deleteItem("raki");
+            raki = false;
+        }    
+    }); //koniec raki.click()
+
+    $('#cart_czekan').click(function() {
+        if(!czekan) {
+            if( insertItem("czekan", 35) ) czekan = true;
+        } else {
+            deleteItem("czekan");
+            czekan = false;
+        }    
+    }); //koniec czekan.click()
 }); //koniec ready
 
