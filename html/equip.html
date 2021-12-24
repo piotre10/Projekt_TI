@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../css/equip.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../javascript/equip.js"></script>
-    <script src="https://kit.fontawesome.com/d625d7728a.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/78af66c39e.js" crossorigin="anonymous"></script>
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet"> -->
@@ -18,7 +18,8 @@
 </head>
 <body>
     <nav>
-        <div>Szlaki</div>
+        <div>Sprzęt</div>
+
         <ul>
             <li><i class="fas fa-sort-amount-down"></i></li>
             <li><a href="routes.html">Szlaki</a></li>
@@ -31,7 +32,42 @@
     </nav>
 
     <div id="content">
-        
+
+        <div id="header"><h1>Wypożyczalnia sprzętu górskiego</h1></div>
+
+        <p id="tutorial">Istrukcja korzystania z wypożyczalni:</p><br>
+
+        <table id="tutorial">
+            
+            <tr>
+                <td>Wybierz potrzebne elementy górskiego ekwipunku.</td>
+                <td><div class="demo_container">
+                    <span>Dodaj do koszyka </span><i class="fas fa-shopping-cart"></i></p>
+                </div></td>
+            </tr>
+
+            <tr>
+                <td>Podaj ile sztuk potrzebujesz - limit 6 sztuk na zamówienie.</td>
+                <td><p>1 - 6 sztuk</p></td>
+            </tr>
+
+            <tr>
+                <td>W razie zamiany zdania usuń wybrany element.</td>
+                <td><div class="demo_container"><span>Usuń z koszyka </span><i class="fas fa-times"></i></p>
+                </div></td>
+            </tr>
+
+            <tr>
+                <td>Zgarnij rabat 10% dla zamówień powyżej 250 zł.</td>
+                <td><s><p>250 zł</p></s><p>225 zł</p></td>
+            </tr>
+
+            <tr>
+                <td>Podaj email i złóż zamówienie.</td>
+                <td><div class="demo_container"><span>Wyślij </span><i class="fas fa-paper-plane"></i></p></div></td>
+            </tr>
+        </table><br>
+  
         <div id="cards_layout">
             <div class="card">
                 <div class="label_container"><p>plecak</p></div>
@@ -110,7 +146,16 @@
             </table>
         </div>
 
-
+        <div id="cart_order">
+            <div class="label_container"><p>Złóż zamówienie</p></div>
+            <div class="email_container">
+                <form>
+                    <label for="email">Podaj email:<br></label>
+                    <input type="email" id="email" name="email">
+                </form>
+            </div>
+            <div class="quantity_container"><span>Wyślij </span><i class="fas fa-paper-plane"></i></p></div>
+        </div>
             
     </div>
 </body>
