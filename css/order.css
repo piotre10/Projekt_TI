@@ -1,0 +1,29 @@
+/* czcionka domyślna */
+html{
+    color:rgb(82, 42, 9);
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* czcionka tekstowa */
+#txt{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* zmiany w stosunku do subpages */ 
+#content{
+    background: hsla(0, 0%, 100%, 80%);
+    height: auto;  /* TRZEBA ZMIENIĆ W SUB TAKŻE*/
+    width: 60%;
+}
+nav div{
+    background-image: url(../images/nameplate_R_yellow.png);
+}
+nav > div{
+    padding-left: 16px;
+    width: 174px;
+}
