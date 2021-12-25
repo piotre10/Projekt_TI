@@ -19,7 +19,7 @@ $(document).ready(function() {
     }
     function insertItem(item_name, item_price) {
         var item_quantity = prompt("Podaj ilość:");
-        if(item_quantity < 1) return 0;
+        if(item_quantity < 1 | item_quantity > 6) return 0;
         
         $('#icon_' + item_name).attr('class', 'fas fa-times');
         $('#txt_' + item_name).text('Usuń z koszyka ');
