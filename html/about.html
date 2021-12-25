@@ -3,26 +3,124 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/subpages.css">
-    <link rel="stylesheet" type="text/css" href="../css/routes.css">
-    <script src="https://kit.fontawesome.com/d625d7728a.js" crossorigin="anonymous"></script>
-	<title> paGórki Szlaki </title>
+    <link rel="stylesheet" type="text/css" href="../css/about.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../javascript/about.js"></script>
+    <script src="https://kit.fontawesome.com/78af66c39e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<title>Pagórki - o nas</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
 	<meta charset="utf-8">
 </head>
 <body>
     <nav>
-        <div>Szlaki</div>
+        <div>O nas</div>
+
         <ul>
             <li><i class="fas fa-sort-amount-down"></i></li>
-            <li><a href=#>Szlaki</a></li>
-            <li><a href=#>Przewodnicy</a></li>
-            <li><a href=#>Sprzęt</a></li>
-            <li><a href=#>Wspomnienia</a></li>
-            <li><a href=#>Kontakt</a></li>
+            <li><a href="routes.html">Szlaki</a></li>
+            <li><a href="guides.html">Przewodnicy</a></li>
+            <li><a href="equip.html">Sprzęt</a></li>
+            <li><a href="blog.html">Wspomnienia</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
         </ul>
-        <a href=#>Strona Główna <i class="fas fa-campground"></i></a>
+        <a href="main.html">Strona Główna <i class="fas fa-campground"></i></a>
     </nav>
+
     <div id="content">
-        <h1>Treść</h1>
+
+        <div id="header"><h1>Poznaj pagórkowy team</h1></div>
+
+        <div id="stat" class="slide-in from-down">
+            <table>
+                <tr>
+                    <td class='value' akhi="114">0</td>
+                    <td class='value' akhi="137">0</td>
+                    <td class='value' akhi="305">0</td>
+                    <td class='value' akhi="216">0</td>
+                </tr>
+                <tr>
+                    <td>odbytych wycieczek</td>
+                    <td>szlaków</td>
+                    <td>przebytych kilometrów</td>
+                    <td>zadowolonych klientów</td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <div class="slides">
+              <img src="https://unsplash.it/400" class="slide-in from-left">
+              <p class="slide-in from-right">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
+                  quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
+                  omnis sapiente neque cumque consequuntur reiciendis deserunt.
+                  Dolorem vero exercitationem consequuntur, eligendi cupiditate
+                  debitis facilis quibusdam magni. Eveniet.
+              </p>
+            </div>
+
+            <div class="slides">
+              <p class="slide-in from-left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
+                quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
+                omnis sapiente neque cumque consequuntur reiciendis deserunt.
+                Dolorem vero exercitationem consequuntur, eligendi cupiditate
+                debitis facilis quibusdam magni. Eveniet.
+              </p>
+              <img src="https://unsplash.it/401" class="slide-in from-right">
+            </div>
+            
+            <div class="slides">
+              <img src="https://unsplash.it/402" class="slide-in from-left">
+              <p class="slide-in from-right">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
+                quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
+                omnis sapiente neque cumque consequuntur reiciendis deserunt.
+                Dolorem vero exercitationem consequuntur, eligendi cupiditate
+                debitis facilis quibusdam magni. Eveniet.
+              </p>
+            </div>
+
+            <div class="slides">
+              <p class="slide-in from-left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
+                quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
+                omnis sapiente neque cumque consequuntur reiciendis deserunt.
+                Dolorem vero exercitationem consequuntur, eligendi cupiditate
+                debitis facilis quibusdam magni. Eveniet.
+              </p>
+              <img src="https://unsplash.it/403" class="slide-in from-right">
+            </div>
+          </div>
+
+          <figure id="fig_team" class="slide-in from-up">
+            <div id="captions1">
+                <figcaption><p id="who">John Doe</p><p id="who_caption">Lorem ipsum dolor sit amet.</p></figcaption>
+                <figcaption><p id="who">John Doe</p><p id="who_caption">Lorem ipsum dolor sit amet.</p></figcaption>
+                <figcaption><p id="who">John Doe</p><p id="who_caption">Lorem ipsum dolor sit amet.</p></figcaption>
+                <figcaption><p id="who">John Doe</p><p id="who_caption">Lorem ipsum dolor sit amet.</p></figcaption>        
+                <figcaption><p id="who">John Doe</p><p id="who_caption">Lorem ipsum dolor sit amet.</p></figcaption>
+                <figcaption><p id="who">John Doe</p><p id="who_caption">Lorem ipsum dolor sit amet.</p></figcaption>    
+            </div> 
+            <div id="captions2">
+                <figcaption><p id="who">John Doe</p><p id="who_caption">Lorem ipsum dolor sit amet.</p></figcaption> 
+            </div>     
+            <img src="../images/us.jpg" id="img_team" usemap="#teammap" alt="Team Pagórkowy w górach">
+        </figure>
+        
+        <map name="teammap">
+            <area id="Klaudia" title="Klaudia" coords="181,588,264,216" shape="rect">
+            <area id="Anna" title="Anna" coords="356,536,266,227" shape="rect">
+            <area id="Karol" title="Karol" coords="359,227,451,480" shape="rect">
+            <area id="Andrzej" title="Andrzej" coords="457,233,567,414" shape="rect">
+            <area id="Piotr" title="Piotr" coords="567,418,454,591" shape="rect">
+            <area id="Radek" title="Radek" coords="571,229,665,587" shape="rect">
+            <area id="Adam" title="Adam" coords="788,234,669,578" shape="rect">
+        </map>
+            
     </div>
 </body>
 

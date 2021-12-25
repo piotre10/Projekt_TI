@@ -1,0 +1,166 @@
+/* czcionka domyślna */
+html
+{
+    color:rgb(82, 42, 9);
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* czcionka tekstowa */
+#who, #who_caption, #stat, #txt, .slides
+{
+    color:rgb(82, 42, 9);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* zmiany w stosunku do subpages */ 
+#content{
+    background: hsla(0, 0%, 100%, 80%);
+    height: auto;  /* TRZEBA ZMIENIĆ W SUB TAKŻE*/
+}
+nav div{
+    background-image: url(../images/nameplate_R_black.png);
+}
+
+/* NAGŁÓWEK */
+#header{
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 4px dotted rgb(82, 42, 9);
+    padding: 5px;
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+/* STATYSTYKA */
+#stat{
+    border-radius: 50px;
+    width: 60%;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-image: url(../images/main_nameplates.jpg);
+    text-align: center;
+    padding: 10px;
+}
+#stat table{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+#stat table td {border: 1px solid rgb(82, 42, 9);}
+#stat table tr:first-child td {border-top: 0;}
+#stat table tr:last-child td {border-bottom: 0;}
+#stat table tr td:first-child {border-left: 0;}
+#stat table tr td:last-child {border-right: 0;}
+
+#stat table tr {
+    height: 100px;
+}
+#stat table td {
+    width: 15%;
+}
+#stat table tr:nth-child(1) {
+    font-size: 40px;
+}
+#stat table tr:nth-child(2) {
+    font-size: 24px;
+}
+
+/* SLAJDY */ 
+.slides {
+    padding: 3em 0;
+    display: grid;
+    grid-gap: 2em;
+    align-items: center;
+    grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(1em,1fr);
+}
+.slides p{
+    text-align: center;
+    font-size: 22px;
+}
+.slides img{
+    border-radius: 30px;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+.from-left {
+    grid-column: 2 / 3;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.from-right {
+    grid-column: 3 / 4;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+}
+.from-up{
+    -webkit-transform: translateY(-30%);
+    transform: translateY(-30%);
+}
+.from-down{
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+}
+.from-left, .from-right, .from-up, .from-down {
+    transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in, -webkit-transform 400ms ease-in;
+    opacity: 0;
+}
+.from-left.appear, .from-right.appear, .from-up.appear, .from-down.appear {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* MAPA ZDJĘCIOWA */
+#img_team{ /* zdjęcie */
+    display: block;
+    margin: 60px auto;
+    border-radius: 50px;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+#captions1{  /* DIV podpisy */
+    width: 600px;
+    position: absolute;
+    top: 150px;
+    left: 350px;
+}
+#captions2{  /* DIV podpisy */
+    position: absolute;
+    top: 550px;
+    left: 40%;
+    width: 115px;
+}
+#fig_team figcaption{ /* podpisy */
+    margin: -25px; 
+    width: 120px;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    background-image: url(../images/main_nameplates.jpg);
+    border: 1px solid rgb(105, 53, 11);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    visibility: hidden;
+}
+#who, #who_caption {
+    text-align: center;
+}
+#who{
+    border-bottom: 2px dotted rgb(105, 53, 11);
+}
+
+/*
+@media only screen and (max-width: 1200px) 
+{
+
+}
+
+@media only screen and (max-width: 820px) 
+{
+
+}*/
+  
+
+  
