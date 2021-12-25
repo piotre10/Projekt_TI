@@ -33,13 +33,11 @@ nav div{
     width: 80%;
 }
 
-/* GŁÓWNY UKŁAD */
-#layout{
-    width: 60%;
-    margin: 0 auto;
-}
-#layout td{
-    padding: 20px;
+/* UKŁAD GLÓWNY */
+#all{
+    text-align:center;
+    vertical-align: middle;
+    padding: 30px;
 }
 
 /* UKŁAD - KONTAKTY */
@@ -50,6 +48,9 @@ nav div{
     background-image: url(../images/main_nameplates.jpg);
     text-align: center;
     padding: 10px;
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 30px;
 }
 #layout_contact_data table{
     width: 100%;
@@ -68,20 +69,38 @@ nav div{
     padding: 16px;
 }
 #layout_contact_data table td:first-child {
-    width: 30px;
+    width: 60px;
 }
 
 /* MAPA GOOGLE */
 .mapouter{
     box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+
+    position:relative;
+    text-align:right;
+    height:400px;
+    width:500px;
 }
-/*
-@media only screen and (max-width: 1200px) 
-{
-
+.gmap_canvas{
+    overflow:hidden;
+    background:none!important;
+    height:400px;
+    width:500px;
 }
 
-@media only screen and (max-width: 820px) 
+@media only screen and (max-width: 700px) 
 {
-
-}*/
+    .mapouter{
+        height:400px;
+        width:400px;
+    }
+    .gmap_canvas{
+        overflow:hidden;
+        background:none!important;
+        height:400px;
+        width:400px;
+    }
+}
