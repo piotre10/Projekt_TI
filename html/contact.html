@@ -3,26 +3,81 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/subpages.css">
-    <link rel="stylesheet" type="text/css" href="../css/routes.css">
-    <script src="https://kit.fontawesome.com/d625d7728a.js" crossorigin="anonymous"></script>
-	<title> paGórki Szlaki </title>
+    <link rel="stylesheet" type="text/css" href="../css/contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../javascript/contact.js"></script>
+    <script src="https://kit.fontawesome.com/78af66c39e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<title>Pagórki - kontakt</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
 	<meta charset="utf-8">
 </head>
 <body>
     <nav>
-        <div>Szlaki</div>
+        <div>Kontakt</div>
+
         <ul>
             <li><i class="fas fa-sort-amount-down"></i></li>
-            <li><a href=#>Szlaki</a></li>
-            <li><a href=#>Przewodnicy</a></li>
-            <li><a href=#>Sprzęt</a></li>
-            <li><a href=#>Wspomnienia</a></li>
-            <li><a href=#>O nas</a></li>
+            <li><a href="routes.html">Szlaki</a></li>
+            <li><a href="guides.html">Przewodnicy</a></li>
+            <li><a href="equip.html">Sprzęt</a></li>
+            <li><a href="blog.html">Wspomnienia</a></li>
+            <li><a href="about.html">O nas</a></li>
         </ul>
-        <a href=#>Strona Główna <i class="fas fa-campground"></i></a>
+        <a href="main.html">Strona Główna <i class="fas fa-campground"></i></a>
     </nav>
+
     <div id="content">
-        <h1>Treść</h1>
+
+        <div id="header"><h1>Bądźmy w kontakcie</h1></div>
+
+        <table id="layout">
+            <tr>
+                <td>
+                    <div id="layout_contact_data">
+                        <table>
+                            <tr>
+                                <td><i class="fas fa-phone"></i></td>
+                                <td><p>+48 692 156 478</p></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-envelope"></i></td>
+                                <td><p>pagorki@tatry.com</p></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-building"></i></td>
+                                <td><p>Witolda Budryka 3<br>30-072 Kraków</p></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-calendar"></i></td>
+                                <td><p>pon - pt<br>8:00 - 16:00</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="500" height="400" id="gmap_canvas" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                                    src="https://maps.google.com/maps?q=Budryka%203%20Krak%C3%B3w&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                            <a href="https://fmovies-online.net">fmovies</a><br>
+                            <style>.mapouter{position:relative;text-align:right;height:400px;width:500px;}</style>
+                            <a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+                            <style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:500px;}</style>
+                        </div>
+                    </div>
+                </td>
+                
+            </tr>
+        </table>
+
+        
+
+        
+
     </div>
 </body>
 
