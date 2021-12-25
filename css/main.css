@@ -4,8 +4,6 @@
 }
 
 /* BACKGROUND */
-/* Żeby nie zaburzać proporcji zdjęcia nie możemy idealnie dopasować szerokości lub wysokości (jedno z nich).
-Padło na szerokość. Wystające fragmenty uzupełniam gradientowym tłem.  */
 body 
 {
     background-image: linear-gradient(CornflowerBlue, rgb(146, 193, 212), rgb(131, 214, 97));
