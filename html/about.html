@@ -99,27 +99,27 @@
 
           <figure id="fig_team" class="slide-in from-up">
             <div id="captions1">
-                <figcaption><p id="who">John Doe</p><p id="who_caption">Lorem ipsum dolor sit amet.</p></figcaption>
-                <figcaption><p id="who">John Doe</p><p id="who_caption">Lorem ipsum dolor sit amet.</p></figcaption>
-                <figcaption><p id="who">John Doe</p><p id="who_caption">Lorem ipsum dolor sit amet.</p></figcaption>
-                <figcaption><p id="who">John Doe</p><p id="who_caption">Lorem ipsum dolor sit amet.</p></figcaption>        
-                <figcaption><p id="who">John Doe</p><p id="who_caption">Lorem ipsum dolor sit amet.</p></figcaption>
-                <figcaption><p id="who">John Doe</p><p id="who_caption">Lorem ipsum dolor sit amet.</p></figcaption>    
+                <figcaption class="person_Tag" id="Klaudia"><p>John Doe</p><p>Lorem ipsum dolor sit amet.</p></figcaption>
+                <figcaption class="person_Tag" id="Anna"><p>John Doe</p><p>Lorem ipsum dolor sit amet.</p></figcaption>
+                <figcaption class="person_Tag" id="Karol"><p>John Doe</p><p>Lorem ipsum dolor sit amet.</p></figcaption>
+                <figcaption class="person_Tag" id="Andrzej"><p>John Doe</p><p>Lorem ipsum dolor sit amet.</p></figcaption>        
+                <figcaption class="person_Tag" id="Radek"><p>John Doe</p><p>Lorem ipsum dolor sit amet.</p></figcaption>
+                <figcaption class="person_Tag" id="Adam"><p>John Doe</p><p>Lorem ipsum dolor sit amet.</p></figcaption>    
             </div> 
             <div id="captions2">
-                <figcaption><p id="who">John Doe</p><p id="who_caption">Lorem ipsum dolor sit amet.</p></figcaption> 
+                <figcaption class="person_Tag" id="Piotr"><p>John Doe</p><p>Lorem ipsum dolor sit amet.</p></figcaption> 
             </div>     
             <img src="../images/us.jpg" id="img_team" usemap="#teammap" alt="Team Pagórkowy w górach">
         </figure>
         
         <map name="teammap">
-            <area id="Klaudia" title="Klaudia" coords="181,588,264,216" shape="rect">
-            <area id="Anna" title="Anna" coords="356,536,266,227" shape="rect">
-            <area id="Karol" title="Karol" coords="359,227,451,480" shape="rect">
-            <area id="Andrzej" title="Andrzej" coords="457,233,567,414" shape="rect">
-            <area id="Piotr" title="Piotr" coords="567,418,454,591" shape="rect">
-            <area id="Radek" title="Radek" coords="571,229,665,587" shape="rect">
-            <area id="Adam" title="Adam" coords="788,234,669,578" shape="rect">
+            <area coords="181,588,264,216" shape="rect" onmouseenter="enterPerson('Klaudia')" onmouseleave="leavePerson('Klaudia')">
+            <area coords="356,536,266,227" shape="rect" onmouseenter="enterPerson('Anna')" onmouseleave="leavePerson('Anna')">
+            <area coords="359,227,451,480" shape="rect" onmouseenter="enterPerson('Karol')" onmouseleave="leavePerson('Karol')">
+            <area coords="457,233,567,414" shape="rect" onmouseenter="enterPerson('Andrzej')" onmouseleave="leavePerson('Andrzej')">
+            <area coords="567,418,454,591" shape="rect" onmouseenter="enterPerson('Piotr')" onmouseleave="leavePerson('Piotr')">
+            <area coords="571,229,665,587" shape="rect" onmouseenter="enterPerson('Radek')" onmouseleave="leavePerson('Radek')">
+            <area coords="788,234,669,578" shape="rect" onmouseenter="enterPerson('Adam')" onmouseleave="leavePerson('Adam')">
         </map>
             
     </div>

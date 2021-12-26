@@ -6,7 +6,7 @@ html
 }
 
 /* czcionka tekstowa */
-#who, #who_caption, #stat, #txt, .slides
+.person_Tag, #stat, #txt, .slides
 {
     color:rgb(82, 42, 9);
     font-family: 'Roboto', sans-serif;
@@ -127,7 +127,7 @@ html
     left: 40%;
     width: 115px;
 }
-#fig_team figcaption{ /* podpisy */
+.person_Tag{ /* podpisy */
     margin: -25px; 
     width: 120px;
     display: inline-block;
@@ -137,14 +137,11 @@ html
     border: 1px solid rgb(105, 53, 11);
     box-shadow: 5px 5px 7px rgba(33,33,33,.7);
     visibility: hidden;
-}
-#who, #who_caption {
     text-align: center;
 }
-#who{
+.person_Tag p:first-child{
     border-bottom: 2px dotted rgb(105, 53, 11);
-}
-
+} 
 /*
 @media only screen and (max-width: 1200px) 
 {

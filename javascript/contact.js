@@ -1,36 +1,9 @@
-$(document).ready(function() {
+function zoom_in(which_child){
+  var elem = document.getElementById(which_child);
+  elem.style.fontSize = '30px'
+}
 
-  /* przepraszam, że jest to takie głupie :( */
-  
-  $('#layout_contact_data table tr:nth-child(1)').mouseenter(function(){ 
-    $('#layout_contact_data table tr:nth-child(1) td:first').css({ 'font-size': '30px', 'transition' : '0.2s' }); 
-  }); 
-  
-  $('#layout_contact_data table tr:nth-child(1)').mouseleave(function(){ 
-    $('#layout_contact_data table tr:nth-child(1) td:first').css({ 'font-size': '20px', 'transition' : '0.2s' }); 
-  }); 
-
-  $('#layout_contact_data table tr:nth-child(2)').mouseenter(function(){ 
-    $('#layout_contact_data table tr:nth-child(2) td:first').css({ 'font-size': '30px', 'transition' : '0.2s' }); 
-  }); 
-  
-  $('#layout_contact_data table tr:nth-child(2)').mouseleave(function(){ 
-    $('#layout_contact_data table tr:nth-child(2) td:first').css({ 'font-size': '20px', 'transition' : '0.2s' }); 
-  }); 
-
-  $('#layout_contact_data table tr:nth-child(3)').mouseenter(function(){ 
-    $('#layout_contact_data table tr:nth-child(3) td:first').css({ 'font-size': '30px', 'transition' : '0.2s' }); 
-  }); 
-  
-  $('#layout_contact_data table tr:nth-child(3)').mouseleave(function(){ 
-    $('#layout_contact_data table tr:nth-child(3) td:first').css({ 'font-size': '20px', 'transition' : '0.2s' }); 
-  }); 
-
-  $('#layout_contact_data table tr:nth-child(4)').mouseenter(function(){ 
-    $('#layout_contact_data table tr:nth-child(4) td:first').css({ 'font-size': '30px', 'transition' : '0.2s' }); 
-  }); 
-  
-  $('#layout_contact_data table tr:nth-child(4)').mouseleave(function(){ 
-    $('#layout_contact_data table tr:nth-child(4) td:first').css({ 'font-size': '20px', 'transition' : '0.2s' }); 
-  }); 
-});
+function zoom_out(which_child){
+  var elem = document.getElementById(which_child);  
+  elem.style.fontSize = '20px'
+}
