@@ -32,13 +32,13 @@ nav {
 nav > div{
     line-height: var(--navbar-height);
     height: 100%;
-    width: 170px;
+    width: 180px;
     background-size: auto 100%;
     display: inline-block;
     font-family: 'Kaushan Script', cursive;
     font-size: 18px;
     text-transform: uppercase;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 /* all links */
 nav a{
@@ -91,7 +91,7 @@ nav > a i{
 #content{
     position: absolute;
     min-height: 800px;
-    width: calc(80% + 120px);
+    width: calc(60% + 180px);
     left: 50%;
     transform:translateX(-50%);
     margin-top: 50px;
@@ -101,7 +101,7 @@ nav > a i{
 }
 
 /* responsivity */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 450px) {
     #content {
         margin-top: 20px;
         width: 100%;
@@ -112,9 +112,9 @@ nav > a i{
     }
   }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1700px) {
     #content {
-      width: 1400px;
+      width: 1200px;
     }
   }
 @media only screen and (max-width: 800px) {
