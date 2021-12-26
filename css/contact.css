@@ -19,9 +19,7 @@ html
     background: hsla(0, 0%, 100%, 80%);
     height: auto;
 }
-nav div{
-    background-image: url(../images/nameplate_R_purple.png);
-}
+
 
 /* NAGŁÓWEK */
 #header{

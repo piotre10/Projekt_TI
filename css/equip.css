@@ -19,9 +19,6 @@ html
     background: hsla(0, 0%, 100%, 80%);
     height: auto;  /* TRZEBA ZMIENIĆ W SUB TAKŻE*/
 }
-nav div{
-    background-image: url(../images/nameplate_R_yellow.png);
-}
 
 /* NAGŁÓWEK */
 #header{

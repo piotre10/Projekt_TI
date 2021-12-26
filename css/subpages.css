@@ -24,6 +24,7 @@ nav {
     height: var(--navbar-height);
     background-image: var(--navbar-bg-image);
     box-shadow: 0px 0px 10px 5px black;
+    font-family: cursive;
 }
 /* Subpage nameplate */
 nav > div{
@@ -32,7 +33,7 @@ nav > div{
     width: 170px;
     background-size: auto 100%;
     display: inline-block;
-    font-family: "Kaushan Script", cursive;
+    font-family: 'Kaushan Script', cursive;
     font-size: 18px;
     text-transform: uppercase;
     padding-left: 20px;
@@ -41,7 +42,7 @@ nav > div{
 nav a{
     line-height: var(--navbar-height);
 	height: 100%;
-	font-size: 18px;
+	font-size: 17px;
 	display: inline-block;
 	text-decoration: none;
     color: var(--navbar-text-color);
