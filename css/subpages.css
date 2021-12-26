@@ -30,7 +30,6 @@ nav > div{
     line-height: var(--navbar-height);
     height: 100%;
     width: 170px;
-    background-image: url(../images/nameplate4.png);
     background-size: auto 100%;
     display: inline-block;
     font-family: "Kaushan Script", cursive;
@@ -88,8 +87,8 @@ nav > a i{
 /* main content div */
 #content{
     position: absolute;
-    height: 1600px;
-    width: 80%;
+    min-height: 800px;
+    width: calc(80% + 120px);
     left: 50%;
     transform:translateX(-50%);
     margin-top: 50px;
@@ -112,7 +111,7 @@ nav > a i{
 
 @media only screen and (min-width: 1600px) {
     #content {
-      width: 1200px;
+      width: 1400px;
     }
   }
 @media only screen and (max-width: 800px) {
@@ -136,4 +135,23 @@ nav > a i{
     nav ul:hover li:nth-child(1){
         display: block;
     }
+}
+
+#red{
+    background-image: url(../images/nameplate_R_red.png);
+}
+#blue{
+    background-image: url(../images/nameplate_R_blue.png);
+}
+#green{
+    background-image: url(../images/nameplate_R_green.png);
+}
+#yellow{
+    background-image: url(../images/nameplate_R_yellow.png);
+}
+#black{
+    background-image: url(../images/nameplate_R_black.png);
+}
+#purple{
+    background-image: url(../images/nameplate_R_purple.png);
 }
