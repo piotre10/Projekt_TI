@@ -4,6 +4,8 @@
     --navbar-height: 50px;
     --navbar-bg-image: url(../images/navbarbg.png);
     --body-bg-image: url(../images/subpagebg2.jpg);
+    --light-wood-image: url(../images/main_nameplates.jpg);
+    --default-text-color: rgb(82, 42, 9);
 }
 
 *{
@@ -95,7 +97,7 @@ nav > a i{
     margin-top: 50px;
     padding: 20px;
     box-shadow: 0px 0px 20px 5px black;
-    background: white;
+    background: hsla(0, 0%, 100%, 80%);;
 }
 
 /* responsivity */

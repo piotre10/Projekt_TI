@@ -16,7 +16,6 @@ html{
 
 /* zmiany w stosunku do subpages */ 
 #content{
-    background: hsla(0, 0%, 100%, 80%);
     height: auto;  /* TRZEBA ZMIENIĆ W SUB TAKŻE*/
     width: 60%;
 }

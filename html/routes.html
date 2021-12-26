@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../css/routes.css">
     <script src="https://kit.fontawesome.com/d625d7728a.js" crossorigin="anonymous"></script>
     <script src="../javascript/routes.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@100&display=swap" rel="stylesheet">
 	<title> paGórki Szlaki </title>
 	<meta charset="utf-8">
 </head>
@@ -14,155 +15,157 @@
         <div id="red">Szlaki</div>
         <ul>
             <li><i class="fas fa-sort-amount-down"></i></li>
-            <li><a href=#>Przewodnicy</a></li>
-            <li><a href=#>Sprzęt</a></li>
-            <li><a href=#>Wspomnienia</a></li>
-            <li><a href=#>O nas</a></li>
-            <li><a href=#>Kontakt</a></li>
+            <li><a href="./guides.html">Przewodnicy</a></li>
+            <li><a href="./equip.html">Sprzęt</a></li>
+            <li><a href="./blog.html">Wspomnienia</a></li>
+            <li><a href="./about.html">O nas</a></li>
+            <li><a href="./contact.html">Kontakt</a></li>
         </ul>
         <a href=#>Strona Główna <i class="fas fa-campground"></i></a>
     </nav>
     <div id="content">
         <div id="filters">
             <h2>Filtry</h2>
-            <div class="filter_group">
+            <div class="filter_group" id="range">
                 <h3>Pasmo górskie</h3>
-                <button class="btn active" onclick="RangeSelection('all')">Wszystkie</button>
-                <button class="btn" onclick="RangeSelection('bieszczady')">Bieszczady</button>
-                <button class="btn" onclick="RangeSelection('tatry')">Tatry</button>
-                <button class="btn" onclick="RangeSelection('sudety')">Sudety</button>
-                <button class="btn" onclick="RangeSelection('beskidy')">Beskidy</button>
+                <button class="btn active" id="all" onclick="OnClickSelection('range', 'all')">Wszystkie</button>
+                <button class="btn" id="Bieszczady" onclick="OnClickSelection('range', 'Bieszczady')">Bieszczady</button>
+                <button class="btn" id="Tatry" onclick="OnClickSelection('range', 'Tatry')">Tatry</button>
+                <button class="btn" id="Sudety" onclick="OnClickSelection('range', 'Sudety')">Sudety</button>
+                <button class="btn" id="Beskidy" onclick="OnClickSelection('range', 'Beskidy')">Beskidy</button>
             </div>
-            <div class="filter_group">
+            <div class="filter_group" id="diff">
                 <h3>Trudność szlaku</h3>
-                <button class="btn active" onclick="DifficultySelection('all')">Wszystkie</button>
-                <button class="btn" onclick="DifficultySelection('easy')">Łatwe</button>
-                <button class="btn" onclick="DifficultySelection('medium')">Średnie</button>
-                <button class="btn" onclick="DifficultySelection('hard')">Trudne</button>
+                <button class="btn active" id="all" onclick="OnClickSelection('diff', 'all')">Wszystkie</button>
+                <button class="btn" id="easy" onclick="OnClickSelection('diff', 'easy')">Łatwe</button>
+                <button class="btn" id="medium" onclick="OnClickSelection('diff', 'medium')">Średnie</button>
+                <button class="btn" id="hard" onclick="OnClickSelection('diff', 'hard')">Trudne</button>
             </div>
-            <div class="filter_group">
+            <div class="filter_group" id="guide">
                 <h3>Przewodnik</h3>
-                <button class="btn active" onclick="GuideSelection('all')">Dowolny</button>
-                <button class="btn" onclick="GuideSelection('all')">Jan Kowalski</button>
-                <button class="btn" onclick="GuideSelection('all')">Karol Nowak</button>
-                <button class="btn" onclick="GuideSelection('all')">Katarzyna Nowakowska</button>
-                <button class="btn" onclick="GuideSelection('all')">Andrzej Kukuczka</button>
-                <button class="btn" onclick="GuideSelection('all')">Anna Skiba</button>
-                <button class="btn" onclick="GuideSelection('all')">Stefan Banach</button>
+                <button class="btn active" id="all" onclick="OnClickSelection('guide', 'all')">Dowolny</button>
+                <button class="btn" id="Kowalski" onclick="OnClickSelection('guide', 'Kowalski')">Jan Kowalski</button>
+                <button class="btn" id="Nowak" onclick="OnClickSelection('guide', 'Nowak')">Karol Nowak</button>
+                <button class="btn" id="Nowakowska" onclick="OnClickSelection('guide', 'Nowakowska')">Katarzyna Nowakowska</button>
+                <button class="btn" id="Kukuczka" onclick="OnClickSelection('guide', 'Kukuczka')">Andrzej Kukuczka</button>
+                <button class="btn" id="Skiba" onclick="OnClickSelection('guide', 'Skiba')">Anna Skiba</button>
+                <button class="btn" id="Banach" onclick="OnClickSelection('guide', 'Banach')">Stefan Banach</button>
             </div>
-            <div class="find_input">
-                <button class="btn" onclick="find()"><i class="fas fa-search"></i></button>
-                <input type="text" id="find" placeholder="Szukaj">
+            <div id="find_div">
+                <button class="btn" onclick="FindByName()"><i class="fas fa-search"></i></button>
+                <input type="text" id="find_input" onkeyup="FindByName()" placeholder="Szukaj po nazwie">
             </div>
         </div>
-        <div class="FDiv pasmo_trudnosc_pwd1,pwd2,pwd3">
-            <h2>Nazwa szlaku</h2>
+        <div class="FDiv Tatry easy Nowak;Banach">
+            <h2>Nazwa szlaku1</h2>
             <h3>Poziom trudności: <label id="easy">Łatwy</label></h3>
             <h3>Trasa: </h3>
             <p>P1 - P2 - P3 - P4 - P5</p>
             <h3>Opis:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
+            <p>Tatry Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
             <h3>Przewodnicy:</h3>
             <ul>
                 <li>Karol Nowak</li>
                 <li>Stefan Banach</li>
             </ul>
         </div>
-        <div class="FDiv ">
-            <h2>Nazwa szlaku</h2>
+        <div class="FDiv Bieszczady medium Skiba;Kowalski">
+            <h2>Nazwa szlaku2</h2>
             <h3>Poziom trudności: <label id="medium">Średni</label></h3>
             <h3>Trasa: </h3>
             <p>P1 - P2 - P3 - P4 - P5</p>
             <h3>Opis:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
+            <p>Bieszczady Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
             <h3>Przewodnicy:</h3>
             <ul>
-                <li>Karol Nowak</li>
-                <li>Stefan Banach</li>
+                <li>Jan Kowalski</li>
+                <li>Anna Skiba</li>
             </ul>
         </div>
-        <div class="FDiv ">
-            <h2>Nazwa szlaku</h2>
+        <div class="FDiv Tatry hard Nowakowska;Kukuczka;Kowalski">
+            <h2>Nsdaku</h2>
             <h3>Poziom trudności: <label id="hard">Trudny</label></h3>
             <h3>Trasa: </h3>
             <h3>Opis:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
+            <p>Tatry Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
             <h3>Przewodnicy:</h3>
             <ul>
+                <li>Katarzyna Nowakowska</li>
+                <li>Andrzej Kukuczka</li>
+                <li>Jan Kowalski</li>
+            </ul>
+        </div>
+        <div class="FDiv Sudety medium Nowak;Kowalski">
+            <h2>Lorem ipsum</h2>
+            <h3>Poziom trudności: <label id="medium">Średni</label></h3>
+            <h3>Trasa: </h3>
+            <h3>Opis:</h3>
+            <p>Sudety Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
+            <h3>Przewodnicy:</h3>
+            <ul>
+                <li>Karol Nowak</li>
+                <li>Jan Kowalski</li>
+            </ul>
+        </div>
+        <div class="FDiv Beskidy easy Nowak;Banach;Skiba">
+            <h2>Beskidzka ścieżka</h2>
+            <h3>Poziom trudności: <label id="easy">Łatwy</label></h3>
+            <h3>Trasa: </h3>
+            <h3>Opis:</h3>
+            <p>Beskidy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
+            <h3>Przewodnicy:</h3>
+            <ul>
+                <li>Karol Nowak</li>
+                <li>Stefan Banach</li>
+                <li>Anna Skiba</li>
+            </ul>
+        </div>
+        <div class="FDiv Sudety medium Kukuczka;Banach">
+            <h2>Sude</h2>
+            <h3>Poziom trudności: <label id="medium">Średni</label></h3>
+            <h3>Trasa: </h3>
+            <h3>Opis:</h3>
+            <p>Sudety Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
+            <h3>Przewodnicy:</h3>
+            <ul>
+                <li>Andrzej Kukuczka</li>
+                <li>Stefan Banach</li>
+            </ul>
+        </div>
+        <div class="FDiv Tatry medium Skiba;Nowakowska">
+            <h2>Z Kuźnic na Giewont</h2>
+            <h3>Poziom trudności: <label id="medium">Średni</label></h3>
+            <h3>Trasa: </h3>
+            <h3>Opis:</h3>
+            <p>Tatry Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
+            <h3>Przewodnicy:</h3>
+            <ul>
+                <li>Anna Skiba</li>
+                <li>Katarzyna Nowakowska</li>
+            </ul>
+        </div>
+        <div class="FDiv Bieszczady easy Kowalski;Nowak;Banach">
+            <h2>Lorem ipsum dolor</h2>
+            <h3>Poziom trudności: <label id="easy">Łatwy</label></h3>
+            <h3>Trasa: </h3>
+            <h3>Opis:</h3>
+            <p>Bieszczady Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
+            <h3>Przewodnicy:</h3>
+            <ul>
+                <li>Jan Kowalski</li>
                 <li>Karol Nowak</li>
                 <li>Stefan Banach</li>
             </ul>
         </div>
-        <div class="FDiv ">
-            <h2>Nazwa szlaku</h2>
-            <h3>Poziom trudności: <label id="easy">Łatwy</label></h3>
+        <div class="FDiv Tatry hard Skiba">
+            <h2>Orla Perć</h2>
+            <h3>Poziom trudności: <label id="hard">Trudny</label></h3>
             <h3>Trasa: </h3>
             <h3>Opis:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
+            <p>Tatry Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
             <h3>Przewodnicy:</h3>
             <ul>
-                <li>Karol Nowak</li>
-                <li>Stefan Banach</li>
-            </ul>
-        </div>
-        <div class="FDiv ">
-            <h2>Nazwa szlaku</h2>
-            <h3>Poziom trudności: <label id="easy">Łatwy</label></h3>
-            <h3>Trasa: </h3>
-            <h3>Opis:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
-            <h3>Przewodnicy:</h3>
-            <ul>
-                <li>Karol Nowak</li>
-                <li>Stefan Banach</li>
-            </ul>
-        </div>
-        <div class="FDiv ">
-            <h2>Nazwa szlaku</h2>
-            <h3>Poziom trudności: <label id="easy">Łatwy</label></h3>
-            <h3>Trasa: </h3>
-            <h3>Opis:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
-            <h3>Przewodnicy:</h3>
-            <ul>
-                <li>Karol Nowak</li>
-                <li>Stefan Banach</li>
-            </ul>
-        </div>
-        <div class="FDiv ">
-            <h2>Nazwa szlaku</h2>
-            <h3>Poziom trudności: <label id="easy">Łatwy</label></h3>
-            <h3>Trasa: </h3>
-            <h3>Opis:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
-            <h3>Przewodnicy:</h3>
-            <ul>
-                <li>Karol Nowak</li>
-                <li>Stefan Banach</li>
-            </ul>
-        </div>
-        <div class="FDiv ">
-            <h2>Nazwa szlaku</h2>
-            <h3>Poziom trudności: <label id="easy">Łatwy</label></h3>
-            <h3>Trasa: </h3>
-            <h3>Opis:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
-            <h3>Przewodnicy:</h3>
-            <ul>
-                <li>Karol Nowak</li>
-                <li>Stefan Banach</li>
-            </ul>
-        </div>
-        <div class="FDiv ">
-            <h2>Nazwa szlaku</h2>
-            <h3>Poziom trudności: <label id="easy">Łatwy</label></h3>
-            <h3>Trasa: </h3>
-            <h3>Opis:</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra sem a dolor scelerisque aliquam. Sed mollis semper tempus. Vivamus hendrerit diam sem, at ultrices mi tristique et. Vestibulum pellentesque quis massa in varius. Donec commodo leo quis libero accumsan mollis. Praesent vel vulputate elit, id consequat augue. Proin ullamcorper eros sed orci fringilla, non dictum lectus tincidunt. Integer ac nisl a lectus tristique lacinia. Nunc quis placerat justo. Etiam accumsan dapibus turpis ac bibendum. Ut auctor neque lectus, sed laoreet arcu consequat vel. </p>
-            <h3>Przewodnicy:</h3>
-            <ul>
-                <li>Karol Nowak</li>
-                <li>Stefan Banach</li>
+                <li>Anna Skiba</li>
             </ul>
         </div>
     </div>

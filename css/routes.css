@@ -1,9 +1,13 @@
+p,h1,h2,h3{
+    color:var(--default-text-color);
+}
+
 h1{
     font-family: Verdana, sans-serif; 
 }
 
 #filters{
-    border-bottom: 4px outset green;
+    border-bottom: 4px outset var(--default-text-color);
     padding: 0.5em 0;
     margin-bottom: 10px;
     font-family: Verdana, sans-serif; 
@@ -20,58 +24,54 @@ h1{
 .filter_group .btn{
     padding: 1em;
     margin: 0.2em 1em;
-    border: 1px solid green;
-    background: whitesmoke;
+    border: 1px solid var(--default-text-color);
+    background-image: var(--light-wood-image);
+    color:var(--default-text-color);
     border-radius: 50%;
     font-family: Helvetica, sans-serif; 
 }
 .filter_group .btn.active{
-    color: whitesmoke;
-    background: green;
+    color: var(--navbar-text-color);
+    background-image: var(--navbar-bg-image);
 }
-.filter_group .btn:hover{
-    color: whitesmoke;
-    background: green;
+.btn:hover{
+    box-shadow: 0 0 15px 3px var(--default-text-color);
 }
-.filter_group .btn.active:hover{
-    background: whitesmoke;
-    color: black;
-}
-.find_input{
+#find_div{
     margin-top: 1em;
     padding-left: 0.5em;
 }
-.find_input .btn{
+#find_div .btn{
     height: 2em;
     width: 2em;
     font-size: 18px;
-    border: 1px solid green;
-    background: whitesmoke;
-    color: green;
+    border: 1px solid var(--default-text-color);
+    background-image: var(--light-wood-image);
+    color:var(--default-text-color);
     border-radius: 20%;
 }
-.find_input .btn:hover{
-    background: lightgrey;
+#find_div .btn:active{
+    color: #f5b507;
+    background-image: var(--navbar-bg-image);
 }
-.find_input .btn:active{
-    background: green;
-    color: whitesmoke;
-}
-#find{
+#find_input{
     height: 2em;
     font-size: 18px;
     width: 40%;
-    border: 1px solid green;
+    border: 1px solid var(--default-text-color);
+    background-image: var(--light-wood-image);
+    border-radius: 10px;
+    padding-left: 10px;
+    color: var(--default-text-color);
 }
 .FDiv{
-    border-top: 3px outset green;
-    border-bottom: 3px outset green;
+    border-top: 3px outset var(--default-text-color);;
+    border-bottom: 3px outset var(--default-text-color);;
     padding: 0.5em;
 }
-.FDiv h2{
+h2{
     margin-bottom: 0.5em;
     font-family: Verdana, sans-serif; 
-    color:green;
 }
 .FDiv h3{
     margin: 0.2em 0;
@@ -84,13 +84,13 @@ h1{
 .FDiv p{
     font-family: Tahoma, sans-serif;
 }
-#easy{
+.FDiv #easy{
     color: green;
 }
-#medium{
+.FDiv #medium{
     color: rgba(255, 208, 0, 0.774);
 }
-#hard{
+.FDiv #hard{
     color: red;
 }
 
