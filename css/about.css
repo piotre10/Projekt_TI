@@ -79,6 +79,9 @@ nav div{
 .slides p{
     text-align: center;
     font-size: 22px;
+    height: 400px;
+    padding: 100px 0;
+    box-sizing: border-box;
 }
 .slides img{
     border-radius: 30px;
