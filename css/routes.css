@@ -1,0 +1,96 @@
+h1{
+    font-family: Verdana, sans-serif; 
+}
+
+#filters{
+    border-bottom: 4px outset green;
+    padding: 0.5em 0;
+    margin-bottom: 10px;
+    font-family: Verdana, sans-serif; 
+}
+#filters h2{
+    margin: 0.3em;
+}
+.filter_group{
+    padding: 0.5em;
+}
+.filter_group h3{
+    margin: 0.5em;
+}
+.filter_group .btn{
+    padding: 1em;
+    margin: 0.2em 1em;
+    border: 1px solid green;
+    background: whitesmoke;
+    border-radius: 50%;
+    font-family: Helvetica, sans-serif; 
+}
+.filter_group .btn.active{
+    color: whitesmoke;
+    background: green;
+}
+.filter_group .btn:hover{
+    color: whitesmoke;
+    background: green;
+}
+.filter_group .btn.active:hover{
+    background: whitesmoke;
+    color: black;
+}
+.find_input{
+    margin-top: 1em;
+    padding-left: 0.5em;
+}
+.find_input .btn{
+    height: 2em;
+    width: 2em;
+    font-size: 18px;
+    border: 1px solid green;
+    background: whitesmoke;
+    color: green;
+    border-radius: 20%;
+}
+.find_input .btn:hover{
+    background: lightgrey;
+}
+.find_input .btn:active{
+    background: green;
+    color: whitesmoke;
+}
+#find{
+    height: 2em;
+    font-size: 18px;
+    width: 40%;
+    border: 1px solid green;
+}
+.FDiv{
+    border-top: 3px outset green;
+    border-bottom: 3px outset green;
+    padding: 0.5em;
+}
+.FDiv h2{
+    margin-bottom: 0.5em;
+    font-family: Verdana, sans-serif; 
+    color:green;
+}
+.FDiv h3{
+    margin: 0.2em 0;
+    font-family: Verdana, sans-serif;
+}
+.FDiv li{
+    list-style: none;
+    font-family: Tahoma, sans-serif;
+}
+.FDiv p{
+    font-family: Tahoma, sans-serif;
+}
+#easy{
+    color: green;
+}
+#medium{
+    color: rgba(255, 208, 0, 0.774);
+}
+#hard{
+    color: red;
+}
+
