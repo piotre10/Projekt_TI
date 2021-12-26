@@ -1,0 +1,48 @@
+#header{
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 4px dotted var(--default-text-color);
+    color: var(--default-text-color);
+    padding: 5px;
+    margin-bottom: 30px;
+    width: 80%;
+}
+.GuideDiv{
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 300px;
+    width:100%;
+    border-bottom: 6px double var(--default-text-color);
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+    color: var(--default-text-color);
+}
+.GuideDiv h2{
+    flex: 1 100%;
+    display: block;
+    width: inherit;
+    margin-bottom: 20px;
+}
+.GuideDiv img{
+    flex: 0 0 auto;
+    width: 256px;
+    height: 256px;
+    align-self: center;
+}
+.GuideDiv p{
+    flex: 1 0 0;
+    align-self: center;
+    width: calc(100%-300px);
+    font-size: 18px;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    .GuideDiv img{
+      width:192px;
+      height: 192px;
+    }
+    .GuideDiv p{
+        font-size: 16px;
+    }
+  }

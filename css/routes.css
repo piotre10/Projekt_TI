@@ -26,6 +26,8 @@ h1{
     margin: 0.2em 1em;
     border: 1px solid var(--default-text-color);
     background-image: var(--light-wood-image);
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
     color:var(--default-text-color);
     border-radius: 50%;
     font-family: Helvetica, sans-serif; 
@@ -93,4 +95,3 @@ h2{
 .FDiv #hard{
     color: red;
 }
-
