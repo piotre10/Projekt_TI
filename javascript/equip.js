@@ -7,7 +7,7 @@ function pushItem(item, price){
 }
 
 function popItem(item){
-    decrement(item);
+    if(items.includes(item)) decrement(item);
 }
 
 function add_to_cart(item_name, item_price) {
@@ -52,7 +52,7 @@ function decrement(item_name){
     if(quantity == 0){
         document.getElementById(item_name).lastElementChild.classList.remove('active');
         delete_from_cart(item_name);
-        items.splice(items.indexOf(item), 1);
+        items.splice(items.indexOf(item_name), 1);
         return;
     }
     if(quantity == 5) document.getElementById(item_name).firstElementChild.classList.add('active');
