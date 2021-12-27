@@ -63,9 +63,6 @@ function decrement(item_name){
 }
 
 function delete_from_cart(item_name) {
-    $('#icon_' + item_name).attr('class', 'fas fa-shopping-cart');
-    $('#txt_' + item_name).text('Dodaj do koszyka ');
-
     var price = $('#list_' + item_name + '_price').text().split(" ");
     updateSum(-parseInt(price[0]));
 
