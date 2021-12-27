@@ -1,13 +1,11 @@
 /* czcionka domyślna */
-html
-{
+html{
     color:rgb(82, 42, 9);
     font-family: 'Kaushan Script', cursive;
 }
 
 /* czcionka tekstowa */
-#tutorial, .quantity_container, .demo_container, .email_container, #table_items, #link_order
-{
+#tutorial, .quantity_container, .demo_container, .email_container, #table_items, .link_container{
     color:rgb(82, 42, 9);
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -29,8 +27,8 @@ p#tutorial{
     font-size: 20px;
 }
 table#tutorial{
-    width: 60%;
-    margin: 0 auto;
+    max-width: 700px;
+    margin: 10px auto;
 }
 table#tutorial td:nth-child(1){
     width: 40%;
@@ -45,9 +43,12 @@ table#tutorial tr{
 
 /* KARTKI ZE SPRZĘTEM */
 #cards_layout{  /* div z kartkami */
-    width: 60%;
+    width: calc(100% - 380px);
     height: 100%;
-    float:left;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .card {
     width: 200px;
@@ -67,23 +68,62 @@ div img{
     height: 80%;
     margin: 10%;
 }
-.label_container, .quantity_container, .demo_container{
+
+/* BELKI */
+.demo_container, .label_container, .quantity_container, .link_container {
+    height: 25px;
     padding: 10px;
     border: 1px solid rgb(82, 42, 9);
     background-image: url(../images/main_nameplates.jpg);
 }
+
 .label_container{
     text-transform: uppercase;
     border-bottom: none;
 }
-.quantity_container {
-    border-top: none;  
+.quantity_container{
+    border-top: none; 
+    color:rgb(80, 74, 69);
+    height: 30px;
+}
+.quantity_container, .demo_container {
+    display: flex;
+    align-items: center;
+}
+.quantity_container i, .demo_container i {
+    width: 50%;
+    font-size: 1.3em;
+}
+.quantity_container i:nth-child(3), .demo_container i {
+    font-size: 1.5em;
+}
+.quantity_container span, .demo_container span {
+    border-left: 1px solid rgb(82, 42, 9);
+    height: 100%;
+}
+.quantity_container .active{
+    color:rgb(82, 42, 9);
+    transition: color 0.1s;
+    transition: font-size 0.1s;
+}
+.quantity_container .active:hover, .demo_container .active{
+    font-size: 1.6em;
+}
+.quantity_container .active:nth-child(1):hover, .demo_container .active:nth-child(1)  {
+    color: forestgreen;
+}
+.quantity_container .active:nth-child(3):hover, .demo_container .active:nth-child(3)  {
+    color: rgb(231, 18, 18);
+    font-size: 1.8em;
+}
+#demo_link_container{
+    border-top: 1px solid rgb(82, 42, 9);
 }
 
 /* LISTA WYBRANYCH ARTYKUŁÓW */
 #cart{
     width: 300px;
-    height: 500px;
+    height: 394px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 20px;
     padding: 15px;
@@ -131,17 +171,17 @@ div img{
 
 /* ZŁOŻENIE ZAMÓWIENIA */
 #cart_order{
-    width: 300px;
+    width: 330px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
-    margin: 35px;
+    margin: 20px;
     float: right;
 }
 a{
     text-decoration: none;
 }
 .email_container{
-    height: 100px;
+    height: 80px;
     border: 1px solid rgb(82, 42, 9);
     background-color: #e9d6c6;
 }
@@ -151,9 +191,21 @@ a{
     top: 50%;
     transform: translate(0, -50%);
 }
+.link_container {
+    border-top: none;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link_container span{
+    margin: 5px;
+}
 
 @media only screen and (max-width: 1200px) 
 {
+    table#tutorial{
+        width: 80%;
+    }
     #cards_layout{
         width: 42%;
     }
@@ -161,16 +213,18 @@ a{
 
 @media only screen and (max-width: 820px) 
 {
+    table#tutorial{
+        width: 90%;
+    }
     #cards_layout{
         width: 100%;
-        float: none;
-        
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
     }
-    .card{
-        margin: 20px ;
-        float: none;
-        display:inline-block;
-    }
+
     #cart{
         float: none;
         overflow: hidden;

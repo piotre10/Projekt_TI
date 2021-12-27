@@ -40,18 +40,19 @@
             
             <tr>
                 <td>Wybierz potrzebne elementy górskiego ekwipunku.</td>
-                <td><div class="demo_container"><span>Dodaj do koszyka </span><i class="fas fa-shopping-cart"></i></p>
-                </div></td>
+                <td><div class="demo_container"><i class="fas fa-cart-arrow-down active"></i><span></span>
+                    <i class="fas fa-times"></i></div></td>
             </tr>
 
             <tr>
-                <td>Podaj ile sztuk potrzebujesz - limit 6 sztuk na zamówienie.</td>
+                <td>Obowiązuje limit 6 sztuk na zamówienie.</td>
                 <td><p>1 - 6 sztuk</p></td>
             </tr>
 
             <tr>
                 <td>W razie zamiany zdania usuń wybrany element.</td>
-                <td><div class="demo_container"><span>Usuń z koszyka </span><i class="fas fa-times"></i></p></div></td>
+                <td><div class="demo_container"><i class="fas fa-cart-arrow-down"></i><span></span>
+                    <i class="fas fa-times active"></i></div></td>
             </tr>
 
             <tr>
@@ -61,58 +62,84 @@
 
             <tr>
                 <td>Podaj email i złóż zamówienie.</td>
-                <td><div class="demo_container"><span>Wyślij </span><i class="fas fa-paper-plane"></i></p></div></td>
+                <td><div class="link_container" id="demo_link_container"><span>Wyślij </span><i class="fas fa-paper-plane"></i></p></div></td>
             </tr>
         </table><br>
   
         <div id="cards_layout">
+
             <div class="card">
                 <div class="label_container"><p>plecak</p></div>
                 <div class="pic_container"><img src="https://unsplash.it/400"></div>
-                <div class="quantity_container" id="cart_plecak">
-                    <span id="txt_plecak">Dodaj do koszyka </span><i id="icon_plecak" class="fas fa-shopping-cart"></i></p>
+                <div class="quantity_container" id='plecak'>
+                    <i class="fas fa-cart-arrow-down active" onclick="pushItem('plecak', 25)"></i><span></span>
+                    <i class="fas fa-times" onclick="popItem('plecak')"></i>
                 </div>
             </div>
     
             <div class="card">
                 <div class="label_container"><p>termos</p></div>
                 <div class="pic_container"><img src="https://unsplash.it/401"></div>
-                <div class="quantity_container" id="cart_termos">
-                    <span id="txt_termos">Dodaj do koszyka </span><i id="icon_termos" class="fas fa-shopping-cart"></i></p>
+                <div class="quantity_container" id='termos'>
+                    <i class="fas fa-cart-arrow-down active" onclick="pushItem('termos', 15)"></i><span></span>
+                    <i class="fas fa-times" onclick="popItem('termos')"></i>
                 </div>
             </div>
             
             <div class="card">
                 <div class="label_container"><p>śpiwór</p></div>
                 <div class="pic_container"><img src="https://unsplash.it/402"></div>
-                <div class="quantity_container" id="cart_śpiwór">
-                    <span id="txt_śpiwór">Dodaj do koszyka </span><i id="icon_śpiwór" class="fas fa-shopping-cart"></i></p>
+                <div class="quantity_container" id='śpiwór'>
+                    <i class="fas fa-cart-arrow-down active" onclick="pushItem('śpiwór', 40)"></i><span></span>
+                    <i class="fas fa-times" onclick="popItem('śpiwór')"></i>
                 </div>
             </div>
     
             <div class="card">
                 <div class="label_container"><p>namiot</p></div>
                 <div class="pic_container"><img src="https://unsplash.it/403"></div>
-                <div class="quantity_container" id="cart_namiot">
-                    <span id="txt_namiot">Dodaj do koszyka </span><i id="icon_namiot" class="fas fa-shopping-cart"></i></p>
+                <div class="quantity_container" id='namiot'>
+                    <i class="fas fa-cart-arrow-down active" onclick="pushItem('namiot', 100)"></i><span></span>
+                    <i class="fas fa-times" onclick="popItem('namiot')"></i>
                 </div>
             </div>
             
             <div class="card">
                 <div class="label_container"><p>raki</p></div>
                 <div class="pic_container"><img src="https://unsplash.it/404"></div>
-                <div class="quantity_container" id="cart_raki">
-                    <span id="txt_raki">Dodaj do koszyka </span><i id="icon_raki" class="fas fa-shopping-cart"></i></p>
+                <div class="quantity_container" id='raki'>
+                    <i class="fas fa-cart-arrow-down active" onclick="pushItem('raki', 40)"></i><span></span>
+                    <i class="fas fa-times" onclick="popItem('raki')"></i>
                 </div>
             </div>
 
             <div class="card">
                 <div class="label_container"><p>czekan</p></div>
                 <div class="pic_container"><img src="https://unsplash.it/405"></div>
-                <div class="quantity_container" id="cart_czekan">
-                    <span id="txt_czekan">Dodaj do koszyka </span><i id="icon_czekan" class="fas fa-shopping-cart"></i></p>
+                <div class="quantity_container" id='czekan'>
+                    <i class="fas fa-cart-arrow-down active" onclick="pushItem('czekan', 35)"></i><span></span>
+                    <i class="fas fa-times" onclick="popItem('czekan')"></i>
                 </div>
             </div>
+
+            <div class="card">
+                <div class="label_container"><p>buty</p></div>
+                <div class="pic_container"><img src="https://unsplash.it/406"></div>
+                <div class="quantity_container" id='buty'>
+                    <i class="fas fa-cart-arrow-down active" onclick="pushItem('buty', 45)"></i><span></span>
+                    <i class="fas fa-times" onclick="popItem('buty')"></i>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="label_container"><p>kask</p></div>
+                <div class="pic_container"><img src="https://unsplash.it/407"></div>
+                <div class="quantity_container" id='kask'>
+                    <i class="fas fa-cart-arrow-down active" onclick="pushItem('kask', 20)"></i><span></span>
+                    <i class="fas fa-times" onclick="popItem('kask')"></i>
+                </div>
+            </div>
+
         </div>
 
         <div id="cart">
@@ -137,7 +164,7 @@
                     <td></td>
                     <td id="sum">
                         <s><p id="discount"></p></s>
-                        <p id="normal"></p>
+                        <p id="normal">0 zł</p>
                     </td>
                 </tr>
             </table>
@@ -148,10 +175,10 @@
             <div class="email_container">
                 <form>
                     <label for="email">Podaj email:<br></label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email_box" name="email">
                 </form>
             </div>
-            <div class="quantity_container"><a href="order.html" id="link_order"><span>Wyślij </span><i class="fas fa-paper-plane"></i></p></a></div>
+            <div class="link_container" onclick="orderCheck()"><span>Wyślij </span><i class="fas fa-paper-plane"></i></p></a></div>
         </div>
             
     </div>
