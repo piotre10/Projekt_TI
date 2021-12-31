@@ -90,7 +90,6 @@ nav > a i{
 /* main content div */
 #content{
     position: absolute;
-    min-height: 800px;
     width: calc(60% + 180px);
     left: 50%;
     transform:translateX(-50%);
