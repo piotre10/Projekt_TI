@@ -10,8 +10,8 @@ function ShowAllHidden(){
     for(let i=0; i<ArticleDivs.length;i++){
         let Div = ArticleDivs[i];
         Div.style.display = "block";
-        let readmore = Div.getElementsByClassName("ReadMoreDiv")[0];
-        readmore.style.display = "none";
+        Div.getElementsByClassName("ReadMoreLink")[0].style.display = "inline";
+        Div.getElementsByClassName("ReadMoreDiv")[0].style.display = "none";
     }
 }
 function ShowFullArticle(index){

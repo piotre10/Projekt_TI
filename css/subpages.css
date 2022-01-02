@@ -140,20 +140,20 @@ nav > a i{
 }
 
 #red{
-    background-image: url(../images/nameplate_R_red.png);
+    background-image: url(../images/nameplates/nameplate_R_red.png);
 }
 #blue{
-    background-image: url(../images/nameplate_R_blue.png);
+    background-image: url(../images/nameplates/nameplate_R_blue.png);
 }
 #green{
-    background-image: url(../images/nameplate_R_green.png);
+    background-image: url(../images/nameplates/nameplate_R_green.png);
 }
 #yellow{
-    background-image: url(../images/nameplate_R_yellow.png);
+    background-image: url(../images/nameplates/nameplate_R_yellow.png);
 }
 #black{
-    background-image: url(../images/nameplate_R_black.png);
+    background-image: url(../images/nameplates/nameplate_R_black.png);
 }
 #purple{
-    background-image: url(../images/nameplate_R_purple.png);
+    background-image: url(../images/nameplates/nameplate_R_purple.png);
 }
