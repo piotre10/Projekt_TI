@@ -9,10 +9,8 @@
 }
 .article{
     position: relative;
-    width:100%;
     border-bottom: 6px double var(--default-text-color);
-    padding: 0.5em;
-    padding-bottom: 1.5em;
+    padding: 1rem;
     color: var(--default-text-color);
     text-align: justify;
     text-justify: inter-word;
@@ -36,6 +34,25 @@
     padding: 0.5rem;
 }
 
+.article .ReadMoreLink{
+    color: var(--default-text-color);
+}
+
+.article .ReturnBtn{
+    background-image: var(--light-wood-image);
+    border-color: var(--default-text-color);
+    color: var(--default-text-color);
+    display: block;
+    margin: 1rem auto;
+    margin-bottom: 0;
+    font-size: 18px;
+    padding: 0.5rem;
+
+}
+.article .ReturnBtn:active{
+    color: #f5b507;
+    background-image: var(--navbar-bg-image);
+}
 .fright{
     float: right;
 }

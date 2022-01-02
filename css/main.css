@@ -79,12 +79,12 @@ ul li a{
     background-size: cover;
 } 
 
-ul li:nth-child(1) a{ background-image: url(../images/nameplate_R_red.png); } 
-ul li:nth-child(2) a{ background-image: url(../images/nameplate_L_blue.png); } 
-ul li:nth-child(3) a{ background-image: url(../images/nameplate_R_yellow.png); }
-ul li:nth-child(4) a{ background-image: url(../images/nameplate_L_green.png); }  
-ul li:nth-child(5) a{ background-image: url(../images/nameplate_R_black.png); } 
-ul li:nth-child(6) a{ background-image: url(../images/nameplate_L_purple.png); }
+ul li:nth-child(1) a{ background-image: url(../images/nameplates/nameplate_R_red.png); } 
+ul li:nth-child(2) a{ background-image: url(../images/nameplates/nameplate_L_blue.png); } 
+ul li:nth-child(3) a{ background-image: url(../images/nameplates/nameplate_R_yellow.png); }
+ul li:nth-child(4) a{ background-image: url(../images/nameplates/nameplate_L_green.png); }  
+ul li:nth-child(5) a{ background-image: url(../images/nameplates/nameplate_R_black.png); } 
+ul li:nth-child(6) a{ background-image: url(../images/nameplates/nameplate_L_purple.png); }
 
 ul li:nth-child(odd) a  { transform: rotateY(-10deg); }
 ul li:nth-child(even) a { transform: rotateY(10deg); }
