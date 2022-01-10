@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/global.css">
     <link rel="stylesheet" type="text/css" href="../css/subpages.css">
     <link rel="stylesheet" type="text/css" href="../css/routes.css">
     <script src="https://kit.fontawesome.com/d625d7728a.js" crossorigin="anonymous"></script>
@@ -22,39 +21,47 @@
             <li><a href="./about.html">O nas</a></li>
             <li><a href="./contact.html">Kontakt</a></li>
         </ul>
-        <a href=#>Strona Główna <i class="fas fa-campground"></i></a>
+        <a href=./main.html>Strona Główna <i class="fas fa-campground"></i></a>
     </nav>
     <div id="content">
+        <h1 id="header">Szlaki</h1>
         <div id="filters">
-            <h2>Filtry</h2>
             <div class="filter_group" id="range">
                 <h3>Pasmo górskie</h3>
+                <div class="ButtonDiv">
                 <button class="btn active" id="all" onclick="OnClickSelection('range', 'all')">Wszystkie</button>
                 <button class="btn" id="Bieszczady" onclick="OnClickSelection('range', 'Bieszczady')">Bieszczady</button>
                 <button class="btn" id="Tatry" onclick="OnClickSelection('range', 'Tatry')">Tatry</button>
                 <button class="btn" id="Sudety" onclick="OnClickSelection('range', 'Sudety')">Sudety</button>
                 <button class="btn" id="Beskidy" onclick="OnClickSelection('range', 'Beskidy')">Beskidy</button>
+                </div>
             </div>
             <div class="filter_group" id="diff">
                 <h3>Trudność szlaku</h3>
+                <div class="ButtonDiv">
                 <button class="btn active" id="all" onclick="OnClickSelection('diff', 'all')">Wszystkie</button>
                 <button class="btn" id="easy" onclick="OnClickSelection('diff', 'easy')">Łatwe</button>
                 <button class="btn" id="medium" onclick="OnClickSelection('diff', 'medium')">Średnie</button>
                 <button class="btn" id="hard" onclick="OnClickSelection('diff', 'hard')">Trudne</button>
             </div>
+            </div>
             <div class="filter_group" id="guide">
                 <h3>Przewodnik</h3>
+                <div class="ButtonDiv">
                 <button class="btn active" id="all" onclick="OnClickSelection('guide', 'all')">Dowolny</button>
                 <button class="btn" id="Kowalski" onclick="OnClickSelection('guide', 'Kowalski')">Jan Kowalski</button>
-                <button class="btn" id="Nowak" onclick="OnClickSelection('guide', 'Nowak')">Karol Nowak</button>
                 <button class="btn" id="Nowakowska" onclick="OnClickSelection('guide', 'Nowakowska')">Katarzyna Nowakowska</button>
+                <button class="btn" id="Nowak" onclick="OnClickSelection('guide', 'Nowak')">Karol Nowak</button>
                 <button class="btn" id="Kukuczka" onclick="OnClickSelection('guide', 'Kukuczka')">Andrzej Kukuczka</button>
                 <button class="btn" id="Skiba" onclick="OnClickSelection('guide', 'Skiba')">Anna Skiba</button>
                 <button class="btn" id="Banach" onclick="OnClickSelection('guide', 'Banach')">Stefan Banach</button>
             </div>
+            </div>
             <div id="find_div">
+                <div class="ButtonDiv">
                 <button class="btn" onclick="FindByName()"><i class="fas fa-search"></i></button>
                 <input type="text" id="find_input" onkeyup="FindByName()" placeholder="Szukaj po nazwie">
+                </div>
             </div>
         </div>
         <div class="FDiv Tatry easy Nowak;Banach">

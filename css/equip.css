@@ -13,14 +13,7 @@ html{
 }
 
 /* NAGŁÓWEK */
-#header{
-    margin: 0 auto;
-    text-align: center;
-    border-bottom: 4px dotted rgb(82, 42, 9);
-    padding: 5px;
-    margin-bottom: 30px;
-    width: 80%;
-}
+
 
 /* INSTRUKCJA = wstęp + tabela 5x2 */
 p#tutorial{
