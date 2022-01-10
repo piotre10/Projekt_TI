@@ -145,7 +145,7 @@ div img{
 
 #cart ul{
     list-style-type: none; 
-    padding: 5px;
+    padding: 10px;
 }
 
 /* pozycjonowanie i wielkości */
@@ -160,7 +160,7 @@ div img{
 #table_summary{
     vertical-align: top;
     font-size: 20px;
-    height: 12%;
+    height: 60px;
 }
 #cart table tr td:nth-child(1){
     width: 70%;
