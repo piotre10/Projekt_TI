@@ -1,12 +1,4 @@
-#header{
-    margin: 0 auto;
-    text-align: center;
-    border-bottom: 4px dotted var(--default-text-color);
-    color: var(--default-text-color);
-    padding: 5px;
-    margin-bottom: 30px;
-    width: 80%;
-}
+
 .GuideDiv{
     display: flex;
     flex-flow: row wrap;

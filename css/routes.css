@@ -12,14 +12,12 @@ h1{
     margin-bottom: 10px;
     font-family: Verdana, sans-serif; 
 }
-#filters h2{
-    margin: 0.3em;
-}
 .filter_group{
     padding: 0.5em;
 }
 .filter_group h3{
     margin: 0.5em;
+    text-align: center;
 }
 .filter_group .btn{
     padding: 1em;
@@ -66,6 +64,10 @@ h1{
     padding-left: 10px;
     color: var(--default-text-color);
 }
+.ButtonDiv{
+    display: block;
+    margin:auto;
+}
 .FDiv{
     border-top: 3px outset var(--default-text-color);;
     border-bottom: 3px outset var(--default-text-color);;
@@ -73,18 +75,18 @@ h1{
 }
 h2{
     margin-bottom: 0.5em;
-    font-family: Verdana, sans-serif; 
+    font-family: var(--main-font); 
 }
 .FDiv h3{
     margin: 0.2em 0;
-    font-family: Verdana, sans-serif;
+    font-family: var(--main-font);
 }
 .FDiv li{
     list-style: none;
-    font-family: Tahoma, sans-serif;
+    font-family: var(--main-font);
 }
 .FDiv p{
-    font-family: Tahoma, sans-serif;
+    font-family: var(--main-font);
 }
 .FDiv #easy{
     color: green;
