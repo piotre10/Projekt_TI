@@ -217,12 +217,12 @@ ul li:nth-child(even) a p{
         position: relative;
         left: 0px;
     }
-    ul li:nth-child(1) a { transform: rotateY(0deg); background-image: url(../images/nameplate_R_red.png);}
-    ul li:nth-child(2) a { transform: rotateY(0deg); background-image: url(../images/nameplate_R_yellow.png);}
-    ul li:nth-child(3) a { transform: rotateY(0deg); background-image: url(../images/nameplate_R_black.png);}
-    ul li:nth-child(4) a { transform: rotateY(0deg); background-image: url(../images/nameplate_R_blue.png);}
-    ul li:nth-child(5) a { transform: rotateY(0deg); background-image: url(../images/nameplate_R_green.png);}
-    ul li:nth-child(6) a { transform: rotateY(0deg); background-image: url(../images/nameplate_R_purple.png);}
+    ul li:nth-child(1) a { transform: rotateY(0deg); background-image: url(../images/nameplates/nameplate_R_red.png);}
+    ul li:nth-child(2) a { transform: rotateY(0deg); background-image: url(../images/nameplates/nameplate_R_yellow.png);}
+    ul li:nth-child(3) a { transform: rotateY(0deg); background-image: url(../images/nameplates/nameplate_R_black.png);}
+    ul li:nth-child(4) a { transform: rotateY(0deg); background-image: url(../images/nameplates/nameplate_R_blue.png);}
+    ul li:nth-child(5) a { transform: rotateY(0deg); background-image: url(../images/nameplates/nameplate_R_green.png);}
+    ul li:nth-child(6) a { transform: rotateY(0deg); background-image: url(../images/nameplates/nameplate_R_purple.png);}
     
     ul li:nth-child(odd) a p{
         position: relative;
