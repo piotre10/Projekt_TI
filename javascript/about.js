@@ -1,12 +1,13 @@
-function enterPerson(person_Name){
-  var tag = document.getElementById(person_Name);
-  tag.style.visibility = 'visible';
-}
-
-function leavePerson(person_Name){
-  var tag = document.getElementById(person_Name);
-  tag.style.visibility = 'hidden';
-}
+$(document).ready(function(){
+  $('map area').hover(function(){
+    let person_id = ' #' + $(this).attr('id')
+  $('#fig_team' + person_id).stop().css({opacity: 0}).animate({opacity: 1}, 200);;
+  },function(){
+    let person_id = ' #' + $(this).attr('id')
+    $('#fig_team' + person_id).stop().css({opacity: 1}).animate({opacity: 0}, 200);;
+    });
+ 
+ });
 
 $(document).ready(function() {
   const sliders = document.querySelectorAll(".slide-in");

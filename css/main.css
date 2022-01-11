@@ -172,7 +172,7 @@ ul li:nth-child(even) a p{
         left: 15px;
     }
 }
-@media only screen and (max-height: 500px) 
+@media only screen and (max-height: 520px) 
 { 
 	h1, h2 { top: 14px; }
     h2 { font-size: 14px; }
