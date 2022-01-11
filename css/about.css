@@ -41,7 +41,7 @@ html{
 }
 #stat table tr:nth-child(1) {
     font-size: 40px;
-    text-shadow: 2px 2px 5px rgb(44, 21, 6);
+    text-shadow: 3px 3px 7px rgb(44, 21, 6);
 }
 #stat table tr:nth-child(2) {
     font-size: 20px;
@@ -77,7 +77,7 @@ html{
 #stat_transpose table td:nth-child(1) {
     font-size: 40px;
     width: 30%;
-    text-shadow: 2px 2px 5px rgb(44, 21, 6);
+    text-shadow: 3px 3px 7px rgb(44, 21, 6);
 }
 #stat_transpose table td:nth-child(2) {
     font-size: 22px;
@@ -105,7 +105,7 @@ html{
 }
 .slides img{
     border-radius: 30px;
-    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 10px rgba(33,33,33,.7);
     width: 400px;
 }
 .from-left {
