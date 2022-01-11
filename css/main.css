@@ -77,6 +77,7 @@ ul li a{
     top: 5px;
     transform-style: preserve-3d;
     background-size: cover;
+    line-height: 20px;
 } 
 
 ul li:nth-child(1) a{ background-image: url(../images/nameplates/nameplate_R_red.png); } 
@@ -157,16 +158,17 @@ ul li:nth-child(even) a p{
         left: 135px;
     } 
     ul li a{ 
-        height: 0.72em; 
-        width: 7.5em; 
+        height: 0.9em; 
+        width: 7.9em; 
         padding: 0.8em;
         top: 3px;
+        line-height: 15px;
     } 
     ul li{ 
-        margin: 0.75em; 
+        margin: 0.55em; 
     }  
     ul li:nth-child(even){
-        right: 15px;
+        right: 12px;
     } 
     ul li:nth-child(odd){   
         left: 15px;
