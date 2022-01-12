@@ -3,23 +3,33 @@
     display: flex;
     flex-flow: row wrap;
     min-height: 300px;
-    width:100%;
-    border-bottom: 6px double var(--default-text-color);
+    width:95%;
+    border: 4px outset var(--default-text-color);
+    border-top: 6px double var(--default-text-color);
     padding: 0.5em;
     padding-bottom: 1.5em;
     color: var(--default-text-color);
+    background-image: var(--light-wood-image);
+    background-size: cover;
+    margin: 1rem auto;
+    border-radius: 2rem;
 }
 .GuideDiv h2{
     flex: 1 100%;
     display: block;
     width: inherit;
     margin-bottom: 20px;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 30px;
+    font-family: var(--title-font);
 }
 .GuideDiv img{
     flex: 0 0 auto;
     width: 256px;
     height: 256px;
     align-self: center;
+    margin: 1rem;
 }
 .GuideDiv p{
     flex: 1 0 0;
@@ -33,6 +43,7 @@
     .GuideDiv img{
       width:192px;
       height: 192px;
+      margin: 0.5rem;
     }
     .GuideDiv p{
         font-size: 16px;
