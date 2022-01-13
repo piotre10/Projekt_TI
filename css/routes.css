@@ -28,7 +28,8 @@ h1{
     transition-duration: 0.3s;
     color:var(--default-text-color);
     border-radius: 50%;
-    font-family: Helvetica, sans-serif; 
+    font-family: Helvetica, sans-serif;
+    width: 150px;
 }
 .filter_group .btn.active{
     color: var(--navbar-text-color);
