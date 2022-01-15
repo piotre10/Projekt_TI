@@ -3,7 +3,7 @@ p,h1,h2,h3{
 }
 
 #filters{
-    border-bottom: 2px outset var(--default-text-color);
+    
     padding: 0.5em 0;
     margin-bottom: 10px;
     font-family: Verdana, sans-serif; 
@@ -47,13 +47,13 @@ p,h1,h2,h3{
     margin: 0.5rem 1em;
 }
 #find_div .btn{
-    height: 2em;
+    height: calc(2em + 2px);
     width: 2em;
     font-size: 18px;
     border: 1px solid var(--default-text-color);
     background-image: var(--light-wood-image);
     color:var(--default-text-color);
-    border-radius: 20%;
+    border-radius: 0 20% 20% 0;
 }
 #find_div .btn:active{
     color: #f5b507;
@@ -65,7 +65,7 @@ p,h1,h2,h3{
     width: 40%;
     border: 1px solid var(--default-text-color);
     background-image: var(--light-wood-image);
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
     padding-left: 10px;
     color: var(--default-text-color);
 }

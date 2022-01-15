@@ -1,19 +1,3 @@
-/*function removeClass(element, removed_class){
-    var arr = element.className.split(" ");
-    for(let i=0; i < arr.length; i++ ){
-        if(arr[i] == removed_class) {
-            t1.splice(i, 1);
-        }
-    }
-    element.className = arr.join(" ");
-}
-function addClass(element, added_class){
-    var arr = element.className.split(" ");
-    if(arr.indexOf(added_class) == -1){
-        arr.push(added_class);
-    }
-    element.className = arr.join(" ");
-}*/
 function getFrobidden(category){
     var buttons = document.getElementById(category).getElementsByClassName("btn");
     var active_buttons = document.getElementById(category).getElementsByClassName("btn active");
@@ -89,7 +73,6 @@ function OnClickSelection (category, searched){
             buttons[0].classList.remove('active');
         }
     }
-    debugger;
     if(BtnDiv.getElementsByClassName('btn active').length == 0){
         buttons[0].classList.add('active');
     }
@@ -97,7 +80,6 @@ function OnClickSelection (category, searched){
 }
 
 function FindByName(){
-    debugger;
     var input = document.getElementById("find_input");
     var filter = input.value.toLowerCase();
     var FDivs = document.getElementsByClassName("FDiv");

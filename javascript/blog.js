@@ -18,7 +18,6 @@ function ShowAllHidden(){
     window.scrollTo(0,0);
 }
 function ShowFullArticle(index){
-    debugger;
     let Div = ArticleDivs[index];
     for(let i=0; i<ArticleDivs.length;i++){
         ArticleDivs[i].style.display = "none";
