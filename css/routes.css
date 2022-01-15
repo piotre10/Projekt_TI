@@ -2,26 +2,31 @@ p,h1,h2,h3{
     color:var(--default-text-color);
 }
 
-h1{
-    font-family: Verdana, sans-serif; 
-}
-
 #filters{
-    border-bottom: 4px outset var(--default-text-color);
+    
     padding: 0.5em 0;
     margin-bottom: 10px;
     font-family: Verdana, sans-serif; 
 }
+#filters h3{
+    margin: 0.5em;
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 24px;
+}
 .filter_group{
     padding: 0.5em;
 }
-.filter_group h3{
-    margin: 0.5em;
-    text-align: center;
+.ButtonDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
-.filter_group .btn{
+.ButtonDiv .btn{
     padding: 1em;
-    margin: 0.2em 1em;
+    margin: 0.5rem 0.5rem;
     border: 1px solid var(--default-text-color);
     background-image: var(--light-wood-image);
     transition-property: box-shadow;
@@ -31,7 +36,7 @@ h1{
     font-family: Helvetica, sans-serif;
     width: 150px;
 }
-.filter_group .btn.active{
+.ButtonDiv .btn.active{
     color: var(--navbar-text-color);
     background-image: var(--navbar-bg-image);
 }
@@ -39,17 +44,16 @@ h1{
     box-shadow: 0 0 15px 3px var(--default-text-color);
 }
 #find_div{
-    margin-top: 1em;
-    padding-left: 0.5em;
+    margin: 0.5rem 1em;
 }
 #find_div .btn{
-    height: 2em;
+    height: calc(2em + 2px);
     width: 2em;
     font-size: 18px;
     border: 1px solid var(--default-text-color);
     background-image: var(--light-wood-image);
     color:var(--default-text-color);
-    border-radius: 20%;
+    border-radius: 0 20% 20% 0;
 }
 #find_div .btn:active{
     color: #f5b507;
@@ -61,26 +65,26 @@ h1{
     width: 40%;
     border: 1px solid var(--default-text-color);
     background-image: var(--light-wood-image);
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
     padding-left: 10px;
     color: var(--default-text-color);
 }
-.ButtonDiv{
-    display: block;
-    margin:auto;
-}
+
 .FDiv{
     border-top: 3px outset var(--default-text-color);;
     border-bottom: 3px outset var(--default-text-color);;
     padding: 0.5em;
 }
-h2{
+.FDiv h2{
     margin-bottom: 0.5em;
-    font-family: var(--main-font); 
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 22px;
 }
 .FDiv h3{
     margin: 0.2em 0;
     font-family: var(--main-font);
+    font-size: 17px;
 }
 .FDiv li{
     list-style: none;
