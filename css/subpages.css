@@ -180,7 +180,7 @@ nav > a i{
       width: 1200px;
     }
   }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 970px) {
     
     #DynamicMenu{
         display: inline-block;
@@ -188,26 +188,6 @@ nav > a i{
     #StaticMenu{
         display: none;
     }
-    /*nav ul li{
-        display: none;
-    }
-    nav ul li:nth-child(1){
-        display:inline-block;
-        justify-content: right;
-    }
-    nav ul:hover{
-        display:block;
-        background-image: var(--navbar-bg-image);
-        z-index: 2;
-        position: absolute;
-        margin-top: -50px;
-    }
-    nav ul:hover li{
-        display: block;
-    }
-    nav ul:hover li:nth-child(1){
-        display: block;
-    }*/
 }
 
 #red{
