@@ -80,6 +80,9 @@ function OnClickSelection (category, searched){
 }
 
 function FindByName(){
+    OnClickSelection('range','all');
+    OnClickSelection('diff','all');
+    OnClickSelection('guide','all');
     var input = document.getElementById("find_input");
     var filter = input.value.toLowerCase();
     var FDivs = document.getElementsByClassName("FDiv");
