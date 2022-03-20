@@ -1,4 +1,7 @@
 # Projekt_TI
+
+Project of webpage written for one of the academic courses
+
 Projekt na techniki internetowe
 
 index - strona główna
