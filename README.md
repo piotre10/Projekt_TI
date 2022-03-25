@@ -1,16 +1,9 @@
 # Projekt_TI
 
-Project of webpage written for one of the academic courses
+Project of webpage written as a college project
 
-Projekt na techniki internetowe
+Authors:
+Me
+https://github.com/rad-mat
 
-index - strona główna
-routes - szlaki
-equip - wypożyczalnia sprzętu
-guides - przewodnicy
-blog - wspomnienia z wycieczek
-contact - kontakt
-about - O nas
 
-global.css - globalne cssy
-subpages.css - cssy dla wszystkich podstron
