@@ -2,8 +2,10 @@
 
 Project of webpage written as a college project
 
-Authors:
+#### Authors:
+
 Me
+
 https://github.com/rad-mat
 
 
