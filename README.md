@@ -1,8 +1,12 @@
-# Projekt_TI
+# PaGórki
 
-Project of webpage written as a college project
+Webpage frontend design written as a college project
 
-#### Authors:
+# "Deployment"
+
+To view webpage locally on your machine please download this repository and then open your_path_to_repo/html/main.html in web browser of choice
+
+# Authors:
 
 Me
 
